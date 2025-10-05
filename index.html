@@ -1,0 +1,48 @@
+<html>
+
+<head>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ejercicio 08 - Numeros del 1 al 10</title>
+
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card" role="region" aria-label="Ejercicio comprobar valor">
+    <h2> Ejercicio 08: Numeros del 1 al 10 </h2>
+
+    <div class="instrucciones">
+      
+      <p> Usa un bucle for para mostrar los numeros del <strong>1 al 10.</strong>
+    </div>
+
+  
+    <div class="numeros"  aria-live="polite">Haz clic en "mostrar numeros".</div>
+
+  
+    <button id="btnejecutar" class="btn" type="button">¡MOSTRAR NUMEROS!</button>
+
+     <ul id="listaNumeros" aria-label="Lista de números"></ul>
+  </div>
+
+
+  <script>
+    function lista() {
+        const lista = document.getElementById("listaNumeros"); 
+        lista.innerHTML="";
+   for (let numeros = 1;numeros<=10;numeros++) {
+       lista.innerHTML += `<li>${numeros}</li>`; 
+       }
+}
+        
+  window.onload = function() {
+    const button = document.getElementById("btnejecutar");
+   button.onclick = lista;  
+       
+       };
+ 
+  </script>
+</body>
+</html>
